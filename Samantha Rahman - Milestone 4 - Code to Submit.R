@@ -1,0 +1,8 @@
+library(readr)
+babies <- read_table("babies.csv")
+View(babies)
+mean(babies$gestation, trim = 0.1)
+hist(babies$gestation, main = "Babies", xlab = "Gestation Data", ylab = "Number of Babies")
+abline(v = trimmed_mean, col = "green", lwd = 2, lty = 2)
+abline(v = mean(babies$gestation, trim = 0.1), col = "green", lwd = 2, lty = 2)
+savehistory("~/Milestones/Milestone 4 - Code to Submit.R")
